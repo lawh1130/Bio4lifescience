@@ -1,0 +1,35 @@
+﻿Exercise 1
+
+
+
+
+Table 1:
+
+
+Sample ID, Day, Month, Year, Location Name, Geographic coordinates, site description, weather conditions, temperature, humidity
+
+
+Unified by sample ID
+
+
+Table 2:
+
+
+Sample ID 1, Species 1, Total Count, development level, measurement, etc
+Sample ID 1, Species 2, Total Count, development level, measurement, etc
+Sample ID 1, Species 3, Total Count, development level, measurement, etc
+
+
+Exercise 2
+
+
+cd ./data
+
+
+head -n 2 *.csv
+
+
+head -n 2 *.csv > headers.csv 
+
+
+mv ../data/headers.csv ../sandbox

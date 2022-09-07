@@ -1,0 +1,122 @@
+﻿Exercise I
+
+
+cd ./miRNA
+
+
+cd ..
+
+
+
+
+Exercise II
+
+
+cd ./sandbox
+
+
+touch createEmpty.txt
+
+
+cd ..
+
+
+cd ./data
+
+
+cd ./miRNA
+
+
+ls
+
+
+ls | wc -l
+
+
+cd ..
+
+
+cd ./Saavedra2013
+
+
+ls | wc -l
+
+
+
+
+Exercise III
+
+
+cd ./data
+
+
+head -n 2 *.csv
+
+
+head -n 2 *.csv > headers.csv 
+
+
+mv ../data/headers.csv ../sandbox
+
+
+
+
+Exercise IV
+
+
+cp ../data/Marra2014_data.fasta ../sandbox
+cd ./sandbox
+
+
+mv Marra2014_data.fasta my_file.fasta
+
+
+wc -l my_file.fasta
+
+
+#9515 lines
+
+
+grep \>contig my_file.fasta | wc -l
+
+
+#955 sequences
+
+
+grep \>contig my_file.fasta > newfile.fasta
+
+
+grep \isogroup00030 newfile.fasta | wc -l
+
+
+#17
+
+
+echo newfile.fasta | tr “=” “,”
+
+
+echo newfile.fasta | tr “  “ “,”
+
+
+#I have to figure out which column the isogroup labels are in
+
+
+head -1 newfile.fasta
+
+
+#looks like column 4
+
+
+tail -n +2 newfile.fasta | cut -d "," -f 4 | sort |uniq|wc -l
+
+
+#954
+
+
+#I’ll just look at the data
+
+
+tail -n +2 newfile.fasta | cut -d "," -f 4 | sort |uniq
+
+
+#contig00302, at 3330 reads
